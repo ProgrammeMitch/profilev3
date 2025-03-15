@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "type": "module",
   "dependencies": {
     "three": "^0.173.0"
   },
