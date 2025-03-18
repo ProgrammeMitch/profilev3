@@ -161,20 +161,20 @@ scene.add(hemLight);
 scene.add(light);
 
 // Create Stars
-const starCount = 10000; // Number of stars
+const starCount = 1000000; // Number of stars
 const starsGeometry = new THREE.BufferGeometry();
 const starsVertices = [];
 
 for (let i = 0; i < starCount; i++) {
-    const x = (Math.random() - 0.5) * 2000; // Random X position
-    const y = (Math.random() - 0.5) * 2000; // Random Y position
-    const z = (Math.random() - 0.5) * 2000; // Random Z position
+    const x = (Math.random() - 0.5) * 10000; // Random X position
+    const y = (Math.random() - 0.5) * 20000; // Random Y position
+    const z = (Math.random() - 0.5) * 10000; // Random Z position
     starsVertices.push(x, y, z);
 }
 
-starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starsVertices, 3));
+starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starsVertices, 2));
 
-const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 2, transparent: true, opacity: 1 });
+const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 1, transparent: true, opacity: 1 });
 const starField = new THREE.Points(starsGeometry, starsMaterial);
 scene.add(starField);
 
